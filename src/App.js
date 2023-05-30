@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Routes,Route, Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import Home from "./components/Home";
+import Detail from "./components/Detail";
+import { fetchNews } from "./redux/Home/newsSlice";
 
-function App() {
+const App = () => {
+  const dispatch = useDispatch();
+  const { status } = useSelector((state) => state.news);
+
+  useEffect(() => {
+    dispatch(fetchNews());
+  }, [dispatch]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+        </ul>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/detail/:title" element={<Detail />} />
+      </Routes>
+
+      {status === "loading" && <p>Loading...</p>}
+      {status === "failed" && <p>Error occurred while fetching news.</p>}
+    </Router>
   );
-}
+};
 
 export default App;
