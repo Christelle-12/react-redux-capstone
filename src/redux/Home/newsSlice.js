@@ -12,9 +12,9 @@ const initialState = {
 export const fetchNews = createAsyncThunk('news/fetchNews', async () => {
   try {
     const response = await axios.get(
-      'https://newsapi.org/v2/everything?q=apple&from=2023-05-29&to=2023-05-29&sortBy=popularity&apiKey=514fd3845622473eaca2815d2b99d44a'
+      'https://newsapi.org/v2/everything?q=apple&from=2023-05-29&to=2023-05-29&sortBy=popularity&apiKey=514fd3845622473eaca2815d2b99d44a',
     );
-    const articles = response.data.articles;
+    const { articles } = response.data;
     const categories = {};
 
     // Calculate the count for each category
