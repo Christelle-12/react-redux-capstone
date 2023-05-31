@@ -14,10 +14,10 @@ const Detail = () => {
       {selectedNews ? (
         <div>
           <h1>{selectedNews.title}</h1>
-          {selectedNews.imageUrl && (
-            <img src={selectedNews.imageUrl} alt={selectedNews.title} />
-          )}
-          <p>{selectedNews.description}</p>
+          <img src={selectedNews.urlToImage} alt={selectedNews.title} />
+          <p>Description: {selectedNews.description}</p>
+          <p>URL: <a href={selectedNews.url} target="_blank" rel="noopener noreferrer">{selectedNews.url}</a></p>
+          <p>Content: {selectedNews.content}</p>
         </div>
       ) : (
         <p>News not found.</p>
