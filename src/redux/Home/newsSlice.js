@@ -6,7 +6,7 @@ const initialState = {
   categories: {},
   status: 'idle',
   error: null,
-  totalResults: 0, // Add totalResults to the initial state
+  totalResults: 0,
 };
 
 export const fetchNews = createAsyncThunk('news/fetchNews', async () => {
@@ -17,9 +17,8 @@ export const fetchNews = createAsyncThunk('news/fetchNews', async () => {
     const { articles } = response.data;
     const categories = {};
 
-    // Calculate the count for each category
     articles.forEach((article) => {
-      const category = article.source.name; // Use source name as category
+      const category = article.source.name;
       if (category in categories) {
         categories[category] += 1;
       } else {
@@ -30,7 +29,7 @@ export const fetchNews = createAsyncThunk('news/fetchNews', async () => {
     return {
       news: articles,
       categories,
-      totalResults: response.data.totalResults, // Add totalResults to the returned data
+      totalResults: response.data.totalResults,
     };
   } catch (error) {
     throw Error(error);
@@ -58,7 +57,7 @@ const newsSlice = createSlice({
         state.status = 'succeeded';
         state.news = action.payload.news;
         state.categories = action.payload.categories;
-        state.totalResults = action.payload.totalResults; // Update totalResults in the state
+        state.totalResults = action.payload.totalResults;
       })
       .addCase(fetchNews.rejected, (state, action) => {
         state.status = 'failed';
