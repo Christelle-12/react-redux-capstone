@@ -1,0 +1,35 @@
+.detailCont {
+  display: flex;
+  width: 100vw;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+  color: #f5f0f0;
+  font-size: 20px;
+}
+
+.title {
+  text-align: center;
+}
+
+.detailCont img {
+  width: 100%;
+}
+
+.tile {
+  padding: 10px;
+}
+
+.tile:nth-child(odd) {
+  background-color: #e6387b;
+}
+
+.tile a {
+  text-decoration: none;
+  color: antiquewhite;
+}
+
+.tile a:hover {
+  color: #3d3535;
+  text-decoration: underline;
+}

@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Detail from './components/Detail';
 import Navigation from './components/Navigation';
 import { fetchNews } from './redux/Home/newsSlice';
+import './CSS/index.css';
 
 const App = () => {
   const dispatch = useDispatch();

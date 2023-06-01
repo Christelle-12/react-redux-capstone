@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { FaArrowAltCircleRight } from 'react-icons/fa'; // Import the forward arrow icon
+import styles from '../CSS/Home.module.css';
 
 const Home = () => {
   const { news, categories, totalResults } = useSelector((state) => state.news);
@@ -11,44 +13,40 @@ const Home = () => {
   };
 
   return (
-    <div>
-      <h1>Home Page</h1>
-      <p>
-        Total Results Sum:
-        {totalResults}
-      </p>
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
+    <div className={styles.homeCont}>
+      <div className={styles.headCont}>
+        <h1 className={styles.titleN}>News</h1>
+        <p>
+          Total Results Sum:
+          {totalResults}
+        </p>
+      </div>
+      <div className={styles.homeCard}>
         {news.map((item) => (
-          <div key={item.title} style={{ textDecoration: 'none', color: 'inherit' }}>
+          <div className={styles.card} key={item.title}>
             <Link
               to={`/detail/${encodeURIComponent(item.title)}`}
-              style={{ textDecoration: 'none', color: 'inherit' }}
+              className={styles.single_card}
             >
               <div
-                style={{
-                  border: '1px solid gray',
-                  padding: '10px',
-                  borderRadius: '5px',
-                  width: '200px',
-                  cursor: 'pointer',
-                }}
                 onClick={() => handleCardClick(item)}
                 onKeyDown={() => handleCardClick(item)}
                 role="link"
                 tabIndex={0}
+                className={styles.card_content}
               >
+                <div className={styles.arrow_wrapper}>
+                  <span>
+                    <FaArrowAltCircleRight className={styles.arrow_icon} />
+                  </span>
+                </div>
                 <img
                   src={item.urlToImage}
                   alt={item.title}
-                  style={{
-                    width: '100%',
-                    height: '150px',
-                    objectFit: 'cover',
-                    borderRadius: '5px',
-                  }}
+                  className={styles.card_image}
                 />
-                <p>{item.title}</p>
-                <p>
+                <p className={styles.titlecd}>{item.title}</p>
+                <p className={styles.titlecd}>
                   Total Results:
                   {categories[item.source.name]}
                 </p>
@@ -58,24 +56,11 @@ const Home = () => {
         ))}
       </div>
       {selectedItem && (
-        <div
-          style={{
-            marginTop: '20px',
-            border: '1px solid gray',
-            padding: '10px',
-            borderRadius: '5px',
-            width: '400px',
-          }}
-        >
+        <div className={styles.selected_item}>
           <img
             src={selectedItem.urlToImage}
             alt={selectedItem.title}
-            style={{
-              width: '100%',
-              height: '150px',
-              objectFit: 'cover',
-              borderRadius: '5px',
-            }}
+            className={styles.selected_item_image}
           />
           <p>{selectedItem.title}</p>
           <p>
@@ -92,10 +77,10 @@ const Home = () => {
               {selectedItem.url}
             </a>
           </p>
-          <p>
+          {/* <p>
             Content:
             {selectedItem.content}
-          </p>
+          </p> */}
         </div>
       )}
     </div>
