@@ -7,14 +7,12 @@ const Detail = () => {
   const { title } = useParams();
   const { news, categories } = useSelector((state) => state.news);
 
-  const selectedItem = news.find(
-    (item) => item.title === decodeURIComponent(title),
-  );
-  const totalResult = categories[selectedItem.source.name];
+  const selectedItem = news.find((item) => item.title === title);
+  const totalResult = selectedItem ? categories[selectedItem.source.name] : 0;
 
   return (
     <div className={styles.detailCont}>
-      {selectedItem && (
+      {selectedItem ? (
         <div>
           <h2 className={styles.title}>{selectedItem.title}</h2>
           <img src={selectedItem.urlToImage} alt={selectedItem.title} />
@@ -40,6 +38,10 @@ const Detail = () => {
             Results:
             {totalResult}
           </p>
+        </div>
+      ) : (
+        <div>
+          <p>Card not present</p>
         </div>
       )}
     </div>

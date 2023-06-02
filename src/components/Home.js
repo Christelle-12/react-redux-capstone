@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { FaArrowAltCircleRight } from 'react-icons/fa'; // Import the forward arrow icon
+import { FaArrowAltCircleRight } from 'react-icons/fa';
 import styles from '../CSS/Home.module.css';
 
 const Home = () => {
@@ -13,21 +13,19 @@ const Home = () => {
   };
 
   return (
-    <div className={styles.homeCont}>
+    <div className={styles.homeCont} data-testid="home">
       <div className={styles.headCont}>
         <h1 className={styles.titleN}>News</h1>
         <p>
           Total Results Sum:
+          {' '}
           {totalResults}
         </p>
       </div>
       <div className={styles.homeCard}>
         {news.map((item) => (
-          <div className={styles.card} key={item.title}>
-            <Link
-              to={`/detail/${encodeURIComponent(item.title)}`}
-              className={styles.single_card}
-            >
+          <div className={styles.card} key={item.title} data-testid="card">
+            <Link to={`/detail/${encodeURIComponent(item.title)}`} className={styles.single_card}>
               <div
                 onClick={() => handleCardClick(item)}
                 onKeyDown={() => handleCardClick(item)}
@@ -48,6 +46,7 @@ const Home = () => {
                 <p className={styles.titlecd}>{item.title}</p>
                 <p className={styles.titlecd}>
                   Total Results:
+                  {' '}
                   {categories[item.source.name]}
                 </p>
               </div>
@@ -65,22 +64,14 @@ const Home = () => {
           <p>{selectedItem.title}</p>
           <p>
             Description:
+            {' '}
             {selectedItem.description}
           </p>
           <p>
             URL:
-            <a
-              href={selectedItem.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {selectedItem.url}
-            </a>
+            {' '}
+            <a href={selectedItem.url} target="_blank" rel="noopener noreferrer">{selectedItem.url}</a>
           </p>
-          {/* <p>
-            Content:
-            {selectedItem.content}
-          </p> */}
         </div>
       )}
     </div>
