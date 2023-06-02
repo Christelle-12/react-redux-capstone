@@ -161,6 +161,6 @@ I would like to thank Microverse for the outstanding collection of information t
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/Christelle-12/space-travelers/blob/f13cdd834cdeac642a7443cd8bbea2be91bcebc1/LICENSE.md) licensed.
+This project is [MIT](https://github.com/Christelle-12/react-redux-capstone/blob/1e107ce4f68769aed2cf9cfdbd715c4fa3aa99f1/LICENSE.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
