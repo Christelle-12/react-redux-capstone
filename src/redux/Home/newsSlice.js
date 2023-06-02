@@ -12,7 +12,7 @@ const initialState = {
 export const fetchNews = createAsyncThunk('news/fetchNews', async () => {
   try {
     const response = await axios.get(
-      'https://gnews.io/api/v4/search?q=example&apikey=81957318f183bfccdf75a1f5f00e129e',
+      'https://gnews.io/api/v4/search?q=example&lang=en&country=us&max=10&apikey=81957318f183bfccdf75a1f5f00e129e',
     );
     const { articles } = response.data;
 

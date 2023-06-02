@@ -32,8 +32,10 @@
 
 # 📖 News Explorer <a name="about-project"></a>
 
-![Screenshot 2](src/images/Screenshot%20from%202023-06-01%2014-23-05.png)
-![Screenshot 1](src/images/Screenshot%20from%202023-06-01%2014-22-32.png)
+
+![Screenshot 1](src/images/Screenshot%20from%202023-06-02%2016-15-09.png)
+![Screenshot 1](src/images/Screenshot%20from%202023-06-02%2016-17-23.png)
+
 
 **[News Explorer]** News Explorer is an application that allows users to browse and explore the latest news articles. It fetches news data from an external API and provides a user-friendly interface for viewing and navigating through various news categories. Users can click on news cards to see detailed information about each article, including the author, description, and source URL. Stay informed with News Explorer! 
 
@@ -41,7 +43,7 @@
 
 The project can be viewed live on the link below:
 
-[View project](https://space-travelershub.onrender.com)
+[View project](https://news-exploration.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

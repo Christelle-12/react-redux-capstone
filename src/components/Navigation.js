@@ -8,7 +8,7 @@ const Navigation = () => (
   <nav className={styles.nav}>
     <ul className={styles.ul_cont}>
       <li>
-        <Link to="/" className={styles.link}>
+        <Link to="/" className={styles.link} aria-label="Go back">
           <span>
             <IoIosArrowBack className={styles.icon} />
           </span>
@@ -17,14 +17,14 @@ const Navigation = () => (
 
       <div className={styles.set_wrapper}>
         <li>
-          <Link to="/">
+          <Link to="/" aria-label="Microphone">
             <span className={styles.icon}>
               <FaMicrophone />
             </span>
           </Link>
         </li>
         <li>
-          <Link to="/settings">
+          <Link to="/settings" aria-label="Settings">
             <span className={styles.icon}>
               <FaCog />
             </span>
