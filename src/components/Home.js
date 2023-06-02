@@ -39,7 +39,7 @@ const Home = () => {
                   </span>
                 </div>
                 <img
-                  src={item.urlToImage}
+                  src={item.image}
                   alt={item.title}
                   className={styles.card_image}
                 />

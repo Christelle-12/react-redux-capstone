@@ -13,9 +13,9 @@ const Detail = () => {
   return (
     <div className={styles.detailCont}>
       {selectedItem ? (
-        <div>
+        <div className={styles.myCont}>
           <h2 className={styles.title}>{selectedItem.title}</h2>
-          <img src={selectedItem.urlToImage} alt={selectedItem.title} />
+          <img src={selectedItem.image} alt={selectedItem.title} />
           <div className={`${styles.tile} ${styles.author}`}>
             <h3>Author:</h3>
             <p>{selectedItem.author}</p>
@@ -24,14 +24,14 @@ const Detail = () => {
             <h3>Description:</h3>
             <p>{selectedItem.description}</p>
           </div>
-          <div className={`${styles.tile} ${styles.url}`}>
+          <div className={styles.tile}>
             <h3>URL:</h3>
             <a
               href={selectedItem.url}
               target="_blank"
               rel="noopener noreferrer"
             >
-              {selectedItem.url}
+              Readmore about the article
             </a>
           </div>
           <p>

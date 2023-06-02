@@ -12,11 +12,11 @@ const initialState = {
 export const fetchNews = createAsyncThunk('news/fetchNews', async () => {
   try {
     const response = await axios.get(
-      'https://newsapi.org/v2/everything?q=apple&from=2023-05-29&to=2023-05-29&sortBy=popularity&apiKey=514fd3845622473eaca2815d2b99d44a',
+      'https://gnews.io/api/v4/search?q=example&apikey=81957318f183bfccdf75a1f5f00e129e',
     );
     const { articles } = response.data;
-    const categories = {};
 
+    const categories = {};
     articles.forEach((article) => {
       const category = article.source.name;
       if (category in categories) {
@@ -29,7 +29,7 @@ export const fetchNews = createAsyncThunk('news/fetchNews', async () => {
     return {
       news: articles,
       categories,
-      totalResults: response.data.totalResults,
+      totalResults: response.data.totalArticles,
     };
   } catch (error) {
     throw Error(error);
