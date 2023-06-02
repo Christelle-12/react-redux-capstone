@@ -17,8 +17,8 @@ const Detail = () => {
           <h2 className={styles.title}>{selectedItem.title}</h2>
           <img src={selectedItem.image} alt={selectedItem.title} />
           <div className={`${styles.tile} ${styles.author}`}>
-            <h3>Author:</h3>
-            <p>{selectedItem.author}</p>
+            <h3>Source:</h3>
+            <p>{selectedItem.source.name}</p>
           </div>
           <div className={`${styles.tile} ${styles.description}`}>
             <h3>Description:</h3>
