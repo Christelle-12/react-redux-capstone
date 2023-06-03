@@ -32,8 +32,7 @@
 
 # 📖 News Explorer <a name="about-project"></a>
 
-
-![Screenshot 1](src/images/Screenshot%20from%202023-06-02%2016-15-09.png)
+![Screenshot 1](src/images/Screenshot%20from%202023-06-03%2008-47-30.png)
 ![Screenshot 1](src/images/Screenshot%20from%202023-06-02%2016-17-23.png)
 
 
