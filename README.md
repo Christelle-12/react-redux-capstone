@@ -43,7 +43,9 @@
 
 The project can be viewed live on the link below:
 
-[View project](https://news-exploration.onrender.com/)
+[View project](https://news-exploration.onrender.com/)<br/>
+Find the walk through video below <br/>
+[Video](https://www.loom.com/share/0b4ad3591a114652bf3fd6840c74f452)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -153,6 +155,7 @@ If you like this project, you can show your support by giving this project's rep
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
+I would like to thank Nelson Sakwa for the [design](https://www.behance.net/sakwadesignstudio).
 
 I would like to thank Microverse for the outstanding collection of information they have provided that enabled me to create the project. In addition, I would like to also thank the team for outstanding work in implementing the requirements of this project. 
 
