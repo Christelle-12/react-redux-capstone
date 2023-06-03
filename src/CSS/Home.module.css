@@ -76,12 +76,26 @@
 
 .card {
   flex-basis: 10%;
-  border: 1px solid #ff9bc8;
   padding: 10px;
 }
 
-.card:nth-child(even) {
-  background-color: #e6578e;
+.card:nth-child(4n),
+.card:nth-child(4n + 1) {
+  background-color: #ec4c8a; /* Color for the first pair of close cards */
+}
+
+.card:nth-child(4n + 2),
+.card:nth-child(4n + 3) {
+  background-color: #fc5193 /* Color for the second pair of close cards */
+}
+
+.arrow_icon svg {
+  color: white;
+}
+
+.total {
+  font-weight: bolder;
+  font-size: 24px;
 }
 
 @media (max-width: 768px) {
