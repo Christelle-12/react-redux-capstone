@@ -32,8 +32,8 @@
 
 # 📖 News Explorer <a name="about-project"></a>
 
-![Screenshot 1](src/images/Screenshot%20from%202023-06-03%2008-47-30.png)
-![Screenshot 1](src/images/Screenshot%20from%202023-06-02%2016-17-23.png)
+![Screenshot 1](src/images/Screenshot%20from%202023-06-03%2014-50-20.png)
+![Screenshot 2](src/images/Screenshot%20from%202023-06-03%2014-55-23.png)
 
 
 **[News Explorer]** News Explorer is an application that allows users to browse and explore the latest news articles. It fetches news data from an external API and provides a user-friendly interface for viewing and navigating through various news categories. Users can click on news cards to see detailed information about each article, including the author, description, and source URL. Stay informed with News Explorer! 

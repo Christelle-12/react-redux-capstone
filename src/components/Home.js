@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-// import { FaArrowAltCircleRight } from 'react-icons/fa';
+import globeImage from '../images/news-4304.svg';
 import styles from '../CSS/Home.module.css';
 
 const Home = () => {
@@ -21,20 +21,27 @@ const Home = () => {
   return (
     <div className={styles.homeCont} data-testid="home">
       <div className={styles.headCont}>
-        <h1 className={styles.titleN}>News</h1>
-        <div>
+        <div className={styles.newscont}>
+          <h1 className={styles.titleN}>News</h1>
           <p className={styles.total}>
             Total Results :
           </p>
           <p>{totalResults}</p>
-          <input
-            type="text"
-            value={filter}
-            onChange={handleFilterChange}
-            placeholder="Filter news..."
-            className={styles.filterInput}
-          />
         </div>
+        <div className={styles.globe}>
+          <span>
+            <img src={globeImage} alt="globe" className={styles.globeImage} />
+          </span>
+        </div>
+      </div>
+      <div className={styles.inputcont}>
+        <input
+          type="text"
+          value={filter}
+          onChange={handleFilterChange}
+          placeholder="Filter news..."
+          className={styles.filterInput}
+        />
       </div>
       <div className={styles.homeCard}>
         {filterNews.map((item) => (

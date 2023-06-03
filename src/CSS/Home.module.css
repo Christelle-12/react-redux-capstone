@@ -15,7 +15,6 @@
   color: white;
   font-weight: 600;
   font-size: 20px;
-  align-items: baseline;
 }
 
 .titlecd {
@@ -53,9 +52,6 @@
 }
 
 .card_image {
-  /* width: 150px; */
-
-  /* height: 100px; */
   object-fit: cover;
   border-radius: 5px;
   display: block;
@@ -91,6 +87,10 @@
   background-color: #fc5193 /* Color for the second pair of close cards */
 }
 
+.arrow_icon {
+  padding-right: 6px;
+}
+
 .arrow_icon svg {
   color: white;
 }
@@ -98,6 +98,24 @@
 .total {
   font-weight: bolder;
   font-size: 24px;
+}
+
+.globe {
+  display: flex;
+  flex-direction: column;
+}
+
+.globeImage {
+  width: 6rem;
+  align-self: flex-end;
+}
+
+.inputcont {
+  padding: 15px 6px;
+}
+
+.filterInput {
+  width: 90%;
 }
 
 @media (max-width: 768px) {
