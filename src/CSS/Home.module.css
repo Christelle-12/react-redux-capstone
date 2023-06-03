@@ -24,7 +24,8 @@
 }
 
 .homeCard {
-  display: flex;
+  display: grid;
+  grid-template-columns: 50% 50%;
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
@@ -52,8 +53,8 @@
 }
 
 .card_image {
-  width: 150px;
-  height: 100px;
+  /* width: 150px; */
+  /* height: 100px; */
   object-fit: cover;
   border-radius: 5px;
   display: block;
